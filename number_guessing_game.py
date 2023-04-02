@@ -1,4 +1,13 @@
 def guess_number(min=1, max=1000):
+    """
+    Play a game where the computer guesses a number in given range (between 1 and 1000 by default) in 10 tries or fewer
+    Answer the questions about correct number with 'y' for yes and 'n' for no.
+    Answer the questions about a direction with 'Too big' or 'Too small' whether your number is smaller or higher.
+    Returns 'I won!' if the computer guesses the number correctly, or an error message if the user cheats.
+    :param min: int - smallest number
+    :param max: int - the biggest number
+    :return: str
+    """
     tries = 0
     while True:
         guess = (min + max) // 2
