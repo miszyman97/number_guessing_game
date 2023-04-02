@@ -20,12 +20,11 @@ def guess_number(min=1, max=1000):
             print(f'I win! Took me {tries} tries to guess')
             break
         elif answer == 'n':
+            tries += 1
             guide = input('Too big or Too small? [Too big, Too small]')
             if guide == 'Too small':
-                tries += 1
                 min = guess + 1
             elif guide == 'Too big':
-                tries += 1
                 max = guess - 1
             else:
                 print('Please enter "Too big" or "Too small"')
